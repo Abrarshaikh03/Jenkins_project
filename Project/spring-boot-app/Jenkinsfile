@@ -14,6 +14,8 @@ pipeline {
             
         stage('Checkout') {
             steps {
+                sh 'rm -rf Project/spring-boot-app/target' // Optional, clears specific directories
+                checkout scm
                 sh 'echo passed' // It will pass the checkout stage from Git Repo
             }
         }
