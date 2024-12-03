@@ -22,7 +22,7 @@ pipeline {
 
         stage('Static Code Analysis') {
             environment {
-                SONAR_URL = 'http://http://13.232.35.149:9000' // Correctly assign SonarQube server's URL
+                SONAR_URL = "http://http://13.232.35.149:9000" // Correctly assign SonarQube server's URL
             }
             steps {
                 withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
@@ -49,8 +49,8 @@ pipeline {
 
         stage('Update Deployment File') {
             environment {
-                GIT_REPO_NAME = "your-git-repo-name" // Provide the GitHub repository name
-                GIT_USER_NAME = "your-git-username" // Provide your GitHub username
+                GIT_REPO_NAME = "https://github.com/Abrarshaikh03/Jenkins_project" // Provide the GitHub repository name
+                GIT_USER_NAME = "Abrarshaikh03" // Provide your GitHub username
             }
             steps {
                 withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
