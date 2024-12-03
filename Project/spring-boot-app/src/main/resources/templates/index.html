@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">Spring Boot Application</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1 th:text="${title}"></h1>
+    </header>
+    <section>
+        <p th:text="${msg}"></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Spring Boot Website</p>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>
